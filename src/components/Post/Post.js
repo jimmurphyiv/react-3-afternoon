@@ -95,7 +95,7 @@ export default class Post extends Component {
             // This has been pulled off of this.state via destructuring
             editing
             ?
-              <Edit text=""
+              <Edit text={this.props.text}
                     hideEdit={ this.hideEdit } 
                     updatePostFn={this.updatePostFn} />
             :

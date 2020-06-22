@@ -19,9 +19,10 @@ class App extends Component {
   }
   
   componentDidMount() {
-    axios.get(`https://practiceapi.devmountain.com/api`).then( results => {
+    axios.get(`https://practiceapi.devmountain.com/api/posts`).then( results => {
       this.setState({ posts: results.data });
-    });
+      
+    }).catch(err => console.log(err))
   }
 
   
